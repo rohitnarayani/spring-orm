@@ -14,11 +14,11 @@ public class Test {
 
         StudentDao studentDao =  applicationContext.getBean(StudentDao.class);
         Student student = new Student();
-        student.setStudentId(6);
-        student.setStudentName("Raj");
-        student.setStudentCity("Vvn");  
+        student.setStudentId(7779);
+        student.setStudentName("Rajesh");
+        student.setStudentCity("Vv nagar");
 //        int result = studentDao.insert(student);
-
+//        System.out.println(result);
 //        System.out.println(studentDao.getStudent(1));
 
 //        List<Student> students = studentDao.getStudents();

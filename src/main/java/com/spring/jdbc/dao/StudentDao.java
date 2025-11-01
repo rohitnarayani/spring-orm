@@ -40,16 +40,15 @@ public class StudentDao {
         return hibernateTemplate.loadAll(Student.class);
     }
 
-    public void deleteStudent(Integer id) {
+    public boolean deleteStudent(Integer id) {
         Student student = hibernateTemplate.get(Student.class,id);
+        boolean isDeleted = false;
         if (student != null) {
             hibernateTemplate.delete(student);
-            System.out.println("Student deleted successfully");
+            isDeleted = true;
+            return isDeleted;
         }
-        else {
-            System.out.println("Student not found");
-        }
-
+        return isDeleted;
     }
 
     public void updateStudent(Student student) {
